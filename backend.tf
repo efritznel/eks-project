@@ -38,7 +38,7 @@ terraform {
         bucket = "fritzhomelab-backend-bucket005"
         key    = "global/s3/terraform.tfstate"
         region = "us-east-1"
-        dynamodb_table = "fritzhomelab-terraform-locking"
+        use_lockfile = true
         encrypt = true
     }
 }
