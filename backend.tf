@@ -21,7 +21,7 @@ resource "aws_s3_bucket_server_side_encryption_configuration" "bucket-encrypt" {
   }
 }
 
-# Create DynamoDB table for terraform state locking
+/*# Create DynamoDB table for terraform state locking
 resource "aws_dynamodb_table" "terraform_locks" {
   name         = var.dynamodb_name 
   billing_mode = "PAY_PER_REQUEST"
@@ -31,7 +31,7 @@ resource "aws_dynamodb_table" "terraform_locks" {
     name = "LockID"
     type = "S"
   }
-}
+}*/
 
 terraform {
     backend "s3" {
